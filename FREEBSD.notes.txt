@@ -11,3 +11,6 @@ pkg install avr-gcc
 # scripts/install-beaglebone.sh    scripts/install-debian.sh        scripts/install-ubuntu-18.04.sh 
 # unixcarbide@klipper1:~/klipper $ vi scripts/install-debian.sh
 
+# found python2 virtualenv in the install scripts,
+pkg install python2
+
