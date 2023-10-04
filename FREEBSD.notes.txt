@@ -4,3 +4,10 @@ mkdir -p out
 ln -s /usr/local/bin/python3.9 /usr/local/bin/python3
 ln -s /usr/local/bin/python3.9 /usr/local/bin/python
 pkg install avr-gcc
+
+# now on to compiler errors,
+# unixcarbide@klipper1:~/klipper $ vi scripts/install-
+# scripts/install-arch.sh          scripts/install-centos.sh        scripts/install-octopi.sh        scripts/install-ubuntu-22.04.sh 
+# scripts/install-beaglebone.sh    scripts/install-debian.sh        scripts/install-ubuntu-18.04.sh 
+# unixcarbide@klipper1:~/klipper $ vi scripts/install-debian.sh
+
