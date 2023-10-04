@@ -1,5 +1,6 @@
-#!/bin/bash
-# This script installs Klipper on an debian
+#!/bin/sh
+# This script installs Klipper on an FreeBSD
+# It was adapted from install-debian.sh
 #
 
 PYTHONDIR="${HOME}/klippy-env"
