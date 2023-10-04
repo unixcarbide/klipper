@@ -13,4 +13,8 @@ pkg install avr-gcc
 
 # found python2 virtualenv in the install scripts,
 pkg install python2
+python -m pip install virtualenv
+
+# for later, (not used now)
+pkg install py39-virtualenv
 
