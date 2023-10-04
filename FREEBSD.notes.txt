@@ -1,0 +1,5 @@
+pkg install gmake
+mkdir -p out
+ln -s /usr/local/bin/python3.9 /usr/local/bin/python3
+ln -s /usr/local/bin/python3.9 /usr/local/bin/python
+
