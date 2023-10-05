@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # Module supporting uploads Klipper firmware to an SD Card via SPI and SDIO
 #
 # Copyright (C) 2021 Eric Callahan <arksine.code@gmail.com>
@@ -321,7 +321,7 @@ class FatFS:
         if ret == 0:
             self.sdcard.print_card_info(print_func)
             dinfo = self.get_disk_info()
-            for key, val in sorted(dinfo.items(), key=lambda x: x[0]):
+            for key, val in sorted(list(dinfo.items()), key=lambda x: x[0]):
                 print_func("%s: %s" % (key, val))
         else:
             raise OSError("flash_sdcard: failed to mount SD Card, returned %s"
@@ -731,7 +731,7 @@ class SDCardSPI:
         print_func("SDHC/SDXC: %s" % (self.high_capacity))
         print_func("Write Protected: %s" % (self.write_protected))
         print_func("Sectors: %d" % (self.total_sectors,))
-        for name, val in self.card_info.items():
+        for name, val in list(self.card_info.items()):
             print_func("%s: %s" % (name, val))
 
     def read_sector(self, sector):
@@ -980,7 +980,7 @@ class SDCardSDIO:
     def _send_command(self, cmd, args, wait=0):
         cmd_code = SD_COMMANDS[cmd]
         argument = 0
-        if isinstance(args, int) or isinstance(args, long):
+        if isinstance(args, int) or isinstance(args, int):
             argument = args & 0xFFFFFFFF
         elif isinstance(args, list) and len(args) == 4:
             argument = ((args[0] << 24) & 0xFF000000) | \
@@ -1079,7 +1079,7 @@ class SDCardSDIO:
         print_func("SDHC/SDXC: %s" % (self.high_capacity))
         print_func("Write Protected: %s" % (self.write_protected))
         print_func("Sectors: %d" % (self.total_sectors,))
-        for name, val in self.card_info.items():
+        for name, val in list(self.card_info.items()):
             print_func("%s: %s" % (name, val))
 
     def read_sector(self, sector):
