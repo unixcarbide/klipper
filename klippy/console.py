@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # Script to implement a test console with firmware over serial port
 #
 # Copyright (C) 2016-2021  Kevin O'Connor <kevin@koconnor.net>
@@ -70,7 +70,7 @@ class KeyboardReader:
         self.output("Loaded %d commands (%s / %s)"
                     % (message_count, version, build_versions))
         self.output("MCU config: %s" % (" ".join(
-            ["%s=%s" % (k, v) for k, v in msgparser.get_constants().items()])))
+            ["%s=%s" % (k, v) for k, v in list(msgparser.get_constants().items())])))
         self.clocksync.connect(self.ser)
         self.ser.handle_default = self.handle_default
         self.ser.register_response(self.handle_output, '#output')
@@ -284,3 +284,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
