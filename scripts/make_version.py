@@ -1,11 +1,11 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # Get the version number for klippy
 #
 # Copyright (C) 2018  Lucas Fink <software@lfcode.ca>
 #
 # This file may be distributed under the terms of the GNU GPLv3 license.
 
-from __future__ import print_function
+
 
 import argparse
 import os
