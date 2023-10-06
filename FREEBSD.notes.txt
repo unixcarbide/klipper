@@ -20,4 +20,10 @@ pkg install avr-gcc
 pkg install py39-virtualenv
 pkg install py39-pip
 
-
+##############################################################################
+# Paused, focusing on kiuah
+# Based on a conversation in the Klipper discord, it appears:
+#  - the install-*.sh scripts are not very much used any more 
+#  - the python2 stuff is still kept for reverse compatibility
+# Focusing  nowon the portability snags in kiuah that prevent it from
+# running on *BSD
